@@ -9,7 +9,7 @@ In the directory of your choice, run
 
 1. If you have not used Heroku before, go to http://devcenter.heroku.com and follow the quickstart steps (Sign up, Install the Heroku Toolbelt, and Login).
 
-2. Inside the cloned repository, run `heroku create APPNAME` where APPNAME is an optional field; Heroku will generate a name for you if it is left blank. Note the URL near the end of the output of the format **http://APPNAME.herokuapp.com**. Save this URL for later.
+2. Inside the cloned repository, run `heroku create APPNAME` where APPNAME is an optional field; Heroku will generate a name for you if it is left blank. Note the URL near the end of the output of the format **http:\/\/APPNAME.herokuapp.com**. Save this URL for later.
 
 3. Run `git push heroku master`.
     * If you get a permissions error, follow these steps.
