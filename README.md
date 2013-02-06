@@ -25,7 +25,7 @@ In the directory of your choice, run
 
 7. Create a new stream for the demo app.
 
-8. Go to your App Stream and set the **&lt;iframe&gt;d URL** field to **http://APPNAME.herokuapp.com** that you saved from Step 3.
+8. Go to your App Stream and set the **&lt;iframe&gt;d URL** field to **http://APPNAME.herokuapp.com** that you saved from Step 2.
 
 9. Install your app and add the new stream to a tab.
 
