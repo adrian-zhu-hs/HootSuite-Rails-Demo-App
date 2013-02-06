@@ -7,9 +7,9 @@ In the directory of your choice, run
 
 ##Hosting the App on Heroku:
 
-1. If you have not used Heroku before, go to http://devcenter.heroku.com and follow the quickstart steps (Sign up, Install the Heroku Toolbelt, and Login).
+1. If you have not used Heroku before, go to [http://devcenter.heroku.com](http://devcenter.heroku.com) and follow the quickstart steps (Sign up, Install the Heroku Toolbelt, and Login).
 
-2. Inside the cloned repository, run `heroku create APPNAME` where APPNAME is an optional field; Heroku will generate a name for you if it is left blank. Note the URL near the end of the output of the format **http:\/\/APPNAME.herokuapp.com**. Save this URL for later.
+2. Inside the cloned repository, run `heroku create APPNAME` where APPNAME is an optional field; Heroku will generate a name for you if it is left blank. Note the URL near the end of the output of the format **http://APPNAME.herokuapp.com**. Save this URL for later.
 
 3. Run `git push heroku master`.
     * If you get a permissions error, follow these steps.
@@ -39,7 +39,7 @@ In the directory of your choice, run
 
 4. Run `rake db:migrate`.
 
-5. Go to your app at [http://hootsuite.com/developers/my-apps](http://hootsuite.com/developers/my-apps) to find your **API Key** and **sharedSecret**.
+5. Go to your app at [http://hootsuite.com/developers/my-apps](http://hootsuite.com/developers/my-apps) to find your **sharedSecret** and **API Key**.
     * If the **sharedSecret** field does not exist, that means that the **Authentication Type** is not **SSO**. Set it to **SSO** and the **sharedSecret** field should appear.
 
 6. Edit the **config/initializers/dev_environment.rb** file to set the correct values for **HOOTSUITE\_SHARED\_SECRET** and **HOOTSUITE\_API\_KEY**.
