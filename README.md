@@ -14,7 +14,7 @@ In the directory of your choice, run
 3. Run `git push heroku master`.
     * If you get a permissions error, follow these steps.
     * If the file **~/.ssh/id_rsa.pub** does not exist, create one by running `ssh-keygen -t rsa`.
-    * Run `heroku keys:add ~/.ssh/id_rsa.pub`
+    * Run `heroku keys:add ~/.ssh/id_rsa.pub`.
 
 4. Go to your App at [http://hootsuite.com/developers](http://hootsuite.com/developers) to find your **API Key** and **sharedSecret**.
     * If the **sharedSecret** field does not exist, that means that the **Authentication Type** is not **SSO**. Set it to **SSO** and the **sharedSecret** field should appear.
