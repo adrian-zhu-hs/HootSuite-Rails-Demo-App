@@ -1,0 +1,27 @@
+a {
+	outline:none;
+}
+.clear {
+	clear:both;
+	height:0px;
+	overflow:hidden;
+}
+
+/* some defaults */
+#demo-app strong {
+	font-weight:bold;
+}
+#demo-app .hs_noMessage {
+	text-align:center;
+}
+.icon-19.logout {
+	background-position: 0 -209px;
+}
+.login_form {
+	margin-top: 80px;
+	text-align:center;
+}
+
+.login_form input[type="submit"] {
+	margin: 10px 0;
+}

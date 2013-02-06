@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Demo App</title>
+
+	<% theme = params[:theme] ? params[:theme] : "blue_steel" %>
+	
+	<%= stylesheet_link_tag theme, :media => "all" %>
+	<%= stylesheet_link_tag "style", :media => "all" %>
+	
+	<%= javascript_include_tag "application" %>
+  	
+  	<script type="text/javascript">
+		$(function () {
+		  hsp.init({
+		    apiKey: '<%= ENV["HOOTSUITE_API_KEY"] %>',
+		    useTheme: true,
+		    receiverPath: '//<%= request.host_with_port %>/api/receiver'
+		  });
+
+		  hsp.bind('refresh', function() {
+		    window.location.reload();
+		  });
+		});
+		$(function(){
+		  	hsp.updatePlacementSubtitle('(<%= current_user_name %>)');
+		});
+	</script>
+
+	<% if protocol == "https://" %>
+		<script type="text/javascript" src="http://static.hootsuite.com/jsapi/0-5/hsp.js"></script>
+	<% else %>
+		<script type="text/javascript" src="https://d2l6uygi1pgnys.cloudfront.net/jsapi/0-5/hsp.js"></script>
+	<% end %>
+
+	<%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

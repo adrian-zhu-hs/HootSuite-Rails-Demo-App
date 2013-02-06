@@ -1,0 +1,10 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: postgresql
+  pool: 5
+  username: root
+  password: 
+
+
+

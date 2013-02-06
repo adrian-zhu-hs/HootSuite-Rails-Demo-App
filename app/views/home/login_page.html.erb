@@ -1,0 +1,4 @@
+<%= form_tag(params.except(:name).merge(:controller => "users", :action => "create"), :class => "login_form") do |f| %>
+	<%= text_field_tag 'name', nil, :placeholder => "Enter your name" %><br />
+	<%= submit_tag "Log In" %>
+<% end %>

@@ -1,0 +1,4 @@
+unless Rails.env.production?
+	ENV['HOOTSUITE_SHARED_SECRET'] = "SHARED_SECRET_VALUE"
+	ENV['HOOTSUITE_API_KEY'] = "API_KEY_VALUE"
+end

@@ -1,0 +1,46 @@
+<div class="hs_stream">
+	<!-- Top Bar --> 
+	<div class="hs_topBar">
+		<div class="hs_content">
+			
+			<div class="hs_controls">
+				<a href="#" dropdown="_search" title="Search"><span class="icon-19 search"></span></a>
+				<a href="#" dropdown="_settings" title="Settings"><span class="icon-19 settings"></span></a>
+			</div>
+			<span id="stream-title"></span>
+		</div>
+
+		<div class="hs_dropdown">
+
+			<!-- SEARCH -->
+			<div class="_search hs_btns-right">
+				<input type="text" id="search_text" />&nbsp;<a class="hs_btn-cmt search">Search</a>
+			</div>
+			
+			<!-- SETTINGS -->
+			<div class="_settings hs_btns-right">
+				Current User: <b><%= current_user_name %></b>
+				<%= link_to "Log Out", params.except(:name).except(:search_tweets).merge(:controller => "users", :action => "delete"), :method => :post, :class => "hs_btn-cmt" %>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="hs_topBarSpace"></div>
+
+	<div class="hs_noMessage" id="app-stream-heading" style="display:none;"></div>
+
+	<div id="app-stream">
+		<% @tweets.each do |tweet| %>
+			<div class="hs_message" data-username="HootSuite">
+				<a href="#" class="hs_networkAvatarLink twitter-user-thumb" is-draggable="1" rel="<%= tweet['from_user'] %>"></a>
+				<img class="hs_networkAvatar" src=<%= tweet['profile_image_url'] %>>
+				<a href="#" class="hs_networkName twitter-user-name" rel="<%= tweet['from_user'] %>"><%= tweet['from_user'] %></a>
+				<a href="http://twitter.com/HootSuite/status/<%= tweet['id'] %>" target="_blank" class="hs_postTime"><%= tweet['date'] + " via " + strip_links(tweet['source']) %></a>
+				<div class="hs_messageContent">
+					<%= tweet['text'].html_safe %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
